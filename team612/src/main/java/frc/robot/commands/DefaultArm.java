@@ -7,52 +7,44 @@
 
 package frc.robot.commands;
 
-import javax.lang.model.util.ElementScanner6;
-
+import edu.wpi.first.wpilibj.GenericHID.Hand;
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.OI;
 import frc.robot.Robot;
 
-public class DefaultServo extends Command {
-  public DefaultServo() {
-    // Use requires() here to declare subsystem dependencies
-    // eg. requires(chassis);
-    requires(Robot.servo);
+public class DefaultArm extends Command {
+
+  private double SPEED = 0.5;
+
+  public DefaultArm() {
+    requires(Robot.arm);
   }
 
-  // Called just before this Command runs the first time
+
   @Override
   protected void initialize() {
   }
 
-  // Called repeatedly when this Command is scheduled to run
+
   @Override
   protected void execute() {
-    System.out.println("Sped");
-    if(OI.gunner_button_x.get()){
-      Robot.servo.servo_grabber.setAngle(90);
-      System.out.println("180sped");
-    }
-    else {
-      Robot.servo.servo_grabber.setAngle(0);
-
-      System.out.println("0sped");
-    }   
+    Robot.arm.grabber_arm.set(OI.gunner.getY(Hand.kLeft) * SPEED);
   }
-  // Make this return true when this Command no longer needs to run execute()
+
+
   @Override
   protected boolean isFinished() {
     return false;
   }
 
-  // Called once after isFinished returns true
+
   @Override
   protected void end() {
   }
 
-  // Called when another command which requires one or more of the same
-  // subsystems is scheduled to run
+
   @Override
   protected void interrupted() {
   }
+  
 }
