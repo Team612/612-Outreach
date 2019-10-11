@@ -17,14 +17,9 @@ public class RobotMap {
 	
   public static int armport = 6;
   public static int Servo_port = 2;
-  // For example to map the left and right motors, you could define the
-  // following variables to use with your drivetrain subsystem.
-  // public static int leftMotor = 1;
-  // public static int rightMotor = 2;
-
-  // If you are using multiple modules, make sure to define both the port
-  // number and the module. For example you with a rangefinder:
-  // public static int rangefinderPort = 1;
-  // public static int rangefinderModule = 1;
-  
+  public static int talon_wheel_fr_port = 2;
+  public static int talon_wheel_fl_port = 0;
+  public static int talon_wheel_br_port = 3;
+  public static int talon_wheel_bl_port = 1;
+    // For example to map the left and right motors, you could define the
 }

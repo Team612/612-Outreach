@@ -25,6 +25,10 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.commands.DefaultServo;
 import frc.robot.subsystems.MoveServo;
+=======
+import frc.robot.subsystems.Drivetrain;
+import frc.robot.subsystems.ExampleSubsystem;
+>>>>>>> Drivetrain1
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -34,7 +38,6 @@ import frc.robot.subsystems.MoveServo;
  * project.
  */
 public class Robot extends TimedRobot {
-	
   public static ExampleSubsystem m_subsystem = new ExampleSubsystem();
   public static OI m_oi;
   public static Arm arm = new Arm();
@@ -45,6 +48,9 @@ public class Robot extends TimedRobot {
   
   public static OI m_oi;
   
+  public static Drivetrain drivetrain = new Drivetrain();
+  public static OI m_oi;
+
   Command m_autonomousCommand;
   SendableChooser<Command> m_chooser = new SendableChooser<>();
 
@@ -54,7 +60,6 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void robotInit() {
-    
     m_oi = new OI();
     m_chooser.setDefaultOption("Default Auto", new ExampleCommand());
     // chooser.addOption("My Auto", new MyAutoCommand());
@@ -65,7 +70,11 @@ public class Robot extends TimedRobot {
    * This function is called every robot packet, no matter the mode. Use
    * this for items like diagnostics that you want ran during disabled,
    * autonomous, teleoperated and test.
+<<<<<<< HEAD
    *
+=======
+   *g
+>>>>>>> Drivetrain1
    * <p>This runs after the mode specific periodic functions, but before
    * LiveWindow and SmartDashboard integrated updating.
    */

@@ -19,6 +19,7 @@ public class OI {
 
   public static XboxController gunner = new XboxController(1);
   public static JoystickButton gunner_button_x = new JoystickButton(gunner, 1);
+  public static XboxController driver= new XboxController(0);
   
   //// CREATING BUTTONS
   // One type of button is a joystick button which is any button on a
