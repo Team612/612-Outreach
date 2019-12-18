@@ -16,4 +16,12 @@ public class RobotMap {
   public static int TALON_BR_PORT = 3;
   public static int TALON_BL_PORT = 1;
 
+  public static int solenoid_G_one= 0;
+	public static int solenoid_G_two= 1;
+  
+  public static int PCM_solenoid_G= 1;
+  public static int PCM_solenoid_D= 1;
+
+  public static int COMPRESSOR_PORT = 0;
+
 }

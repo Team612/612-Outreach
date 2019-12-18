@@ -1,17 +1,17 @@
 package frc.robot.subsystems;
 
-import edu.wpi.first.wpilibj.Servo;
+import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import frc.robot.RobotMap;
-import frc.robot.commands.DefaultServo;
+import frc.robot.commands.DefaultGrabber;
 
 public class Grabber extends Subsystem {
 
-  public Servo grabber_servo = new Servo(RobotMap.SERVO_PORT);
+  public DoubleSolenoid grabber_sol = new DoubleSolenoid(RobotMap.PCM_solenoid_G, RobotMap.solenoid_G_one, RobotMap.solenoid_G_two);
 
   @Override
   public void initDefaultCommand() {
-    setDefaultCommand(new DefaultServo());
+    setDefaultCommand(new DefaultGrabber());
   }
 
 }

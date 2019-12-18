@@ -1,20 +1,23 @@
 package frc.robot;
 
+import edu.wpi.first.wpilibj.Compressor;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Scheduler;
-import frc.robot.subsystems.Arm;
 import frc.robot.subsystems.Drivetrain;
 import frc.robot.subsystems.Grabber;
 
 public class Robot extends TimedRobot {
 
   // Objects of subsystems
-  public static Arm arm = new Arm();
-  public static Grabber servo = new Grabber();
+  public static Grabber grabber = new Grabber();
   public static Drivetrain drivetrain = new Drivetrain();
+  public static Compressor compressor = new Compressor(RobotMap.COMPRESSOR_PORT);
 
   @Override
   public void robotInit() {
+
+    compressor.setClosedLoopControl(true);
+
   }
 
 
